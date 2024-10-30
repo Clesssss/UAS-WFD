@@ -15,9 +15,9 @@ Make sure you have the following installed:
 First, clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/username/repo-name.git
-cd repo-name
+git clone https://github.com/Clesssss/UAS-WFD.git
 ```
+Go to the project folder in the VS Code
 
 ### 2. Install Dependencies
 
