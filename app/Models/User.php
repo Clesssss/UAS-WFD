@@ -11,6 +11,8 @@ class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
+    protected $connection = 'mysql';
+    protected $table = 'pengguna_event';
 
     /**
      * The attributes that are mass assignable.
@@ -18,11 +20,13 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'role',
+        'nama',
         'password',
+        'email',
+        'age',
+        'gender',
     ];
-
     /**
      * The attributes that should be hidden for serialization.
      *
