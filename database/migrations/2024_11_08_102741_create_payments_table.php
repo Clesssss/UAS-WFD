@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->id('payment_id');
+            $table->id();
             $table->unsignedBigInteger('registration_id');
-            $table->foreign('registration_id')->references('registration_id')->on('registrations');
+            $table->foreign('registration_id')->references('id')->on('registrations');
             $table->decimal('amount', 10, 2);
             $table->enum('payment_status', ['pending', 'completed', 'failed']);
             $table->dateTime('payment_date');

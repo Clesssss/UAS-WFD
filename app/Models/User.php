@@ -11,6 +11,15 @@ class User extends Authenticatable
 {
     protected $table = 'users';
 
+    protected $fillable = [
+        'username',
+        'email',
+        'password',
+        'role',
+        'age',
+        'gender',
+    ];
+
     public function event()
     {
         return $this->hasMany(Event::class, 'event_id', 'event_id');
