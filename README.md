@@ -23,8 +23,12 @@ Go to the project folder in the VS Code
 
 ```bash
 composer install
+```
+```bash
 npm install
 ```
+
+
 
 ### 3. Set Up Environment Variables
 
@@ -48,5 +52,8 @@ php artisan migrate
 
 ```bash
 php artisan serve
+```
+```bash
 npm run dev
 ```
+
