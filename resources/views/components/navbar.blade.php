@@ -12,7 +12,7 @@
     	<div class="hidden w-full md:block md:w-auto" id="navbar-default">
       		<ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
         		<li>
-          			<a href="#" class="block py-2 px-3 text-gray-900 md:p-0" aria-current="page">Home</a>
+          			<a href="{{ route('index') }}" class="block py-2 px-3 text-gray-900 md:p-0" aria-current="page">Home</a>
         		</li>
         		@if(Auth::check())
 					<li>

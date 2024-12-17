@@ -7,13 +7,9 @@
         @vite('resources/css/app.css')
     </head>
     <body>
-        @include('include.navbar')
-        
-        
+        <x-navbar/>
         @yield('content')
-
-
-        @include('include.footer')
+        <x-footer/>
     </body>
 </html>
 

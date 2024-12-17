@@ -15,15 +15,18 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100);
             $table->string('image_url', 255);
-            $table->dateTime('datetime');
+            $table->dateTime('start_time');
+            $table->dateTime('end_time'); 
             $table->string('location', 255);
             $table->text('description');
-            $table->enum('event_status', ['ongoing', 'upcoming', 'finished']);
+            $table->enum('event_status', ['ongoing', 'upcoming', 'finished'])
+            ->default('upcoming');
             $table->unsignedInteger('capacity');
             $table->unsignedInteger('registrants')->default(0);
-            $table->decimal('price', 10, 2);
+            $table->unsignedInteger('price')->default(0);
             $table->timestamps();
         });
+
     }
 
     /**

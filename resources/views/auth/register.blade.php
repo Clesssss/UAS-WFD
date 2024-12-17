@@ -1,4 +1,4 @@
-@extends('base.base')
+@extends('layouts.app')
 
 @section('content')
 <div class="flex justify-center items-center min-h-screen my-12 bg-white">
