@@ -34,6 +34,16 @@ jobs:
       run: |
         npm i
         npm run build
+        
+    - name: Set permissions
+      run: |
+        chmod -R 775 storage bootstrap/cache
+
+    - name: Optimize Laravel for production
+      run: |
+        php artisan config:cache
+        php artisan route:cache
+        php artisan view:cache
       
     - name: Deploying project # copy files to specified FTP directory
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
