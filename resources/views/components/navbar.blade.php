@@ -14,9 +14,12 @@
         		<li>
           			<a href="{{ route('index') }}" class="block py-2 px-3 text-gray-900 md:p-0" aria-current="page">Home</a>
         		</li>
+				<li>
+          			<a href="{{ route('events.index') }}" class="block py-2 px-3 text-gray-900 md:p-0" aria-current="page">Events</a>
+        		</li>
         		@if(Auth::check())
 					<li>
-          				<a href="#" class="block py-2 px-3 text-gray-900 md:p-0">Profile</a>
+          				<a href="{{ route('profile') }}" class="block py-2 px-3 text-gray-900 md:p-0">Profile</a>
         			</li>
         			<li>
           				<a href="{{ route('logout') }}" class="block py-2 px-3 text-gray-400 md:p-0 hover:text-gray-900"

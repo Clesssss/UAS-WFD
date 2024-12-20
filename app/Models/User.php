@@ -20,8 +20,13 @@ class User extends Authenticatable
         'gender',
     ];
 
-    public function event()
+    public function registrations()
     {
-        return $this->hasMany(Event::class, 'event_id', 'event_id');
+        return $this->hasMany(Registration::class);
+    }
+
+    public function events()
+    {
+        return $this->hasManyThrough(Event::class, Registration::class, 'user_id', 'id', 'id', 'event_id');
     }
 }
